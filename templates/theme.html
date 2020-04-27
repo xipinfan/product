@@ -42,14 +42,14 @@
   </head>
   <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#"><img width="28px" height="28px" src=" {% static 'log_p.png' %} " alt=""> Product Hunt</a>
+      <a class="navbar-brand" href="{% url '主页面' %}"><img width="28px" height="28px" src=" {% static 'log_p.png' %} " alt=""> Product Hunt</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="#">Login in</a>
-          <a class="nav-item nav-link" href="#">Sign up</a>
+          <a class="nav-item nav-link" href="accout/login">Login in</a>
+          <a class="nav-item nav-link" href="{% url '注册页面' %}">Sign up</a>
         </div>
       </div>
     </nav>

@@ -1,0 +1,18 @@
+<style>
+    .hanpi{
+        margin: 8px;
+    }
+</style>
+{% extends "theme.html" %}
+
+{% block content %}
+    <h2 align="center">注册Products账户</h2>
+    <form action="{% url '注册页面' %}" method="post" align="center">
+        {% csrf_token %}
+        用户名：<br><input class="hanpi" type="text" name="用户名"><br>
+        密码：<br><input class="hanpi" type="password" name="密码"><br>
+        确认密码：<br><input class="hanpi" type="password" name="确认密码"><br>
+        {{ name1 }}<br>
+        <input class="hanpi btn btn-primary" type="submit" value="提交">
+    </form>
+{% endblock content %}
