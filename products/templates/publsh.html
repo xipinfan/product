@@ -1,0 +1,15 @@
+{% extends "theme.html" %}
+
+{% block content %}
+    <h2 align="center">发布新的APP</h2>
+    <form action="{% url '发布页面' %}" method="post" align="center" enctype="multipart/form-data">
+        {% csrf_token %}
+        APP名称：<br><input class="hanpi" type="text" name="APP名称"><br><br>
+        介绍：<br><textarea name="介绍" cols="100" rows="10"></textarea><br><br>
+        APP链接: <br><input type="text" name="APP链接"><br><br>
+        APP图标(缩略图):<input type="file"  name="APP图标"><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        大图:<input type="file" name="大图"><br>{{ 错误 }}<br>
+        <input class="hanpi btn btn-primary" type="submit" value="发布">
+    </form>
+{% endblock content %}
